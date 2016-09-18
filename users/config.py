@@ -1,0 +1,3 @@
+BIZZ = 3
+FUZZ = 5
+ELIGIBLE_AGE = 13

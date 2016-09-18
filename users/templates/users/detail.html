@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+User Information
+{% endblock title %}
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-4 well" style="background-color:lavender;">First Name</div>
+	<div class="col-sm-8 well" style="background-color:lavenderblush;">{{ user.first_name }}</div>
+</div>
+<div class="row">
+	<div class="col-sm-4 well" style="background-color:lavender;">Last Name</div>
+	<div class="col-sm-8 well" style="background-color:lavenderblush;">{{ user.last_name }}</div>
+</div>
+<div class="row">
+	<div class="col-sm-4 well" style="background-color:lavender;">Email</div>
+	<div class="col-sm-8 well" style="background-color:lavenderblush;">{{ user.email }}</div>
+</div>
+<div class="row">
+	<div class="col-sm-4 well" style="background-color:lavender;">Birthday</div>
+	<div class="col-sm-8 well" style="background-color:lavenderblush;">{{ user.birthday }}</div>
+</div>
+<div class="row">
+	<div class="col-sm-4 well" style="background-color:lavender;">Number</div>
+	<div class="col-sm-8 well" style="background-color:lavenderblush;">{{ user.random_number }}</div>
+</div>
+{% endblock content %}
+{% block buttons %}
+<a href="{% url "user_edit" user.id %}" class="btn btn-primary btn-lg">Edit User</a>
+<a href="{% url "user_list" %}" class="btn btn-default btn-lg">List Users</a>
+{% endblock buttons %}
