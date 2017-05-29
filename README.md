@@ -5,3 +5,5 @@ Setup Instrunction
 3. python manage.py runserver
 
 You can see running app at http://localhost:8000
+
+End!
